@@ -1,0 +1,11 @@
+multiple-select-search {
+  .col{
+    color: #FFF;
+  }
+  .text{
+    background-color: color($colors, basic);
+    width: fit-content;
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+  }
+}

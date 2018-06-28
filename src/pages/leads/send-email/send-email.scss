@@ -1,0 +1,6 @@
+page-send-email {
+  ion-navbar.toolbar ion-buttons[end] button{
+    background: transparent;
+    color: color($colors, grayText);
+  }
+}

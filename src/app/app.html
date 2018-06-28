@@ -1,0 +1,28 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons ion-text  (click)="openDashboard()">
+        <ion-title>
+          <ion-icon name="speedometer"></ion-icon> Dashboard
+        </ion-title>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list *ngFor="let page of pages">
+        <button ion-item (click)="toggleAccordian(page)">
+          {{page.title}}
+        </button>
+        <ion-list [ngClass]="{'child-list': true, active: page.isOpen}">
+            <button ion-item menuClose  *ngFor="let spage of page.subPages" (click)="navigateTo(spage)">
+              {{spage.title}}
+            </button>
+        </ion-list>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,85 @@
+<!--
+  Generated template for the ManagePackagesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <inner-header></inner-header>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let item of packageList">
+    <ion-grid>
+      <ion-row >
+        <ion-col>
+          <ion-thumbnail item-start>
+            <img src="../assets/imgs/kerala-tour-packages.jpg">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+              <p ion-item>
+                <ion-badge  color="basic" item-start>2D/1N</ion-badge>
+                <button ion-button item-end outline color="basic">
+                  <ion-icon name="settings"></ion-icon>
+                </button>
+              </p>
+              <p ion-item>
+                <ion-badge  color="basic" item-start>Active</ion-badge>
+              </p>
+              <p ion-item>
+                <span ion-text align-items-start>10</span>
+                <button align-items-center tooltip="People Inquiries" color="lightDark" positionV="bottom" arrow>
+                  <ion-icon name="information-circle"></ion-icon>
+                </button>
+
+                <span ion-text align-items-start>0</span>
+                <button align-items-center  tooltip="People View" color="lightDark" positionV="bottom" arrow>
+                  <ion-icon name="eye"></ion-icon>
+                </button>
+              </p>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list inset>
+      <ion-item>
+        <ion-label>Recieved On</ion-label>
+        <ion-label>12/06/2018</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Display In catalog <ion-icon name="help-circle"></ion-icon></ion-label>
+        <ion-toggle color="basic" [(ngModel)]="pepperoni"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-badge  color="basic" item-start>15%</ion-badge>
+        Day Wise Breakup
+        <button ion-button item-end outline color="basic">
+          <ion-icon name="add" item-end></ion-icon> Add
+        </button>
+      </ion-item>
+      <ion-item>
+        <ion-badge  color="basic" item-start>35%</ion-badge>
+        Gallery
+        <button ion-button item-end outline color="basic" (click)="openImageGallery(1)">
+          <ion-icon name="add" item-end></ion-icon> Add
+        </button>
+      </ion-item>
+      <ion-item>
+        <ion-badge  color="basic" item-start>65%</ion-badge>
+        Price
+        <button ion-button item-end outline color="basic">
+          <ion-icon name="add" item-end></ion-icon> Add
+        </button>
+      </ion-item>
+      <ion-item>
+          <progress-bar [value]="50" [progressTitle]="'Package Completed'"></progress-bar>
+      </ion-item>
+    </ion-list>
+
+  </ion-card>
+
+</ion-content>

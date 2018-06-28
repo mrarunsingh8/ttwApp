@@ -1,0 +1,128 @@
+<!--
+  Generated template for the LeadsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<page-menu-header></page-menu-header>
+
+<ion-content padding>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="leadType">
+      <ion-segment-button value="mylead">
+        My Leads
+      </ion-segment-button>
+      <ion-segment-button value="travelleadengine">
+        Travel Lead Engine
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div [ngSwitch]="leadType">
+    <ion-list [ngClass]="{mylead:true}" *ngSwitchCase="'mylead'">
+      <ion-card>
+        <ion-card-header>
+          <h1 ion-text class="lead-card-title">My Leads</h1>
+        </ion-card-header>
+        <ion-card-content>
+          <p ion-text>A powerful tool to help you search, sort, and purchase travel leads.</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card *ngFor="let item of myLeadData" (click)="openPage(item.component)">
+        <ion-card-header>
+          <div class="lead-card-header">
+            <h2 class="lead-card-title">{{item.title}}</h2>
+            <h1 class="lead-card-count" *ngIf="item.count">{{item.count}}</h1>
+            <h1 class="lead-card-count" *ngIf="item.countIcon">
+              <ion-icon name="{{item.countIcon}}"></ion-icon>
+            </h1>
+          </div>
+          <img [src]="item.image" alt="All Lead">
+        </ion-card-header>
+        <ion-card-content>
+          <h6 ion-text>{{item.description}}</h6>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-list>
+
+    <ion-list [ngClass]="{travelleadengine:true}" *ngSwitchCase="'travelleadengine'">
+
+      <ion-card>
+        <ion-card-header>
+          <h1 ion-text>Travel Lead Engine</h1>
+        </ion-card-header>
+        <ion-card-content>
+          <p ion-text>Dedicated section to easily manage Purchased, Received and Own/Added Leads.</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <div class="lead-card-header" align-items-center>
+            <img src="http://www.betattw.in/static/assets/images/search-lead-icon.png" alt="All Lead">
+            <h2 class="lead-card-title">Search Travel Leads</h2>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <h6 ion-text>Search leads that could be useful for your travel business and purchase them as per your choice.</h6>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <div class="lead-card-header" align-items-center>
+            <img src="http://www.betattw.in/static/assets/images/recomended-lead-icon.png" alt="All Lead">
+            <h2 class="lead-card-title">Recommended Leads <span class="counter">(100)</span></h2>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <h6 ion-text>Check the recommended leads in sync with the criteria set by you in your tour packages.</h6>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <div class="lead-card-header" align-items-center>
+            <img src="http://www.betattw.in/static/assets/images/other-lead-icon.png" alt="All Lead">
+            <h2 class="lead-card-title">Other Leads</h2>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <h6 ion-text>Check leads for services like ticketing, hotel booking, car coach rental, passport & visa, travel insurance etc.</h6>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <div class="lead-card-header" align-items-center>
+            <img src="http://www.betattw.in/static/assets/images/lead-filter.png" alt="All Lead">
+            <h2 class="lead-card-title">Filtered Leads</h2>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-buttons ion-item clear>
+              <ion-icon name="arrow-forward"></ion-icon>
+              Domestic Leads
+            </ion-buttons>
+            <ion-buttons ion-item>
+              <ion-icon name="arrow-forward"></ion-icon>
+              Outbound Leads
+            </ion-buttons>
+            <ion-buttons ion-item>
+              <ion-icon name="arrow-forward"></ion-icon>
+              Inbound Leads
+            </ion-buttons>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+
+    </ion-list>
+  </div>
+
+  <ion-toolbar></ion-toolbar>
+
+</ion-content>

@@ -1,0 +1,87 @@
+page-home {
+  .small-box {
+    position: relative;
+    display: block;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    color: #fff;
+  }
+
+  .small-box>.inner {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .small-box>.inner {
+    min-height: 85px;
+  }
+  .small-box>.inner {
+    padding: 15px;
+    min-height: 100px;
+    width: 150px;
+  }
+
+  .small-box .inner{
+    display: flex;
+    margin-left: 30px;
+    padding-top: 36px;
+  }
+  .small-box .icon {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    z-index: 0;
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.15);
+  }
+
+  .small-box>.small-box-footer {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: #fff;
+    color: rgba(255,255,255,.8);
+    display: block;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+    text-decoration: none;
+  }
+
+  .small-box h3 {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0px;
+    white-space: nowrap;
+    padding: 0;
+  }
+  .small-box h3, .small-box p {
+    z-index: 5;
+    color: #FFF;
+  }
+  .small-box .display-flex {
+    height: 105px;
+  }
+  .small-box p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .bg-aqua {
+    background-color: #63c8e0;
+  }
+
+  .bg-yellow {
+    background-color: #a7bf18;
+  }
+
+  .bg-green {
+    background-color: #16af69;
+  }
+
+  .bg-red {
+    background-color: #de440c;
+  }
+  .list-ios > .item-block:first-child {
+    border-top: 0px;
+  }
+}

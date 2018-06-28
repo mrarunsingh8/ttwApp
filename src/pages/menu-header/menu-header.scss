@@ -1,0 +1,30 @@
+page-menu-header {
+  ion-buttons button, ion-buttons a, ion-buttons input, ion-buttons textarea, ion-buttons div {
+    pointer-events: auto;
+    background: transparent;
+    color: color($colors, basic);/*#28b2e8;*/
+  }
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: color($colors, basic);/*#28b2e8;*/
+    background-color: transparent;
+  }
+  page-menu-header ion-buttons button, page-menu-header ion-buttons a, page-menu-header ion-buttons input, page-menu-header ion-buttons textarea, page-menu-header ion-buttons div {
+    color: color($colors, basic);;/*#28b2e8;*/
+  }
+  ion-header ion-navbar p{
+    margin: 0px;
+  }
+  .toolbar-title-md {
+    padding: 0 0px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: color($colors, basic);;/*#28b2e8;*/
+  }
+  .header-slogan a {
+    color: color($colors, basic);;/*#28b2e8;*/
+    text-decoration: none;
+  }
+  .header-slogan a span{
+    color: #8ab4ff;
+  }
+}

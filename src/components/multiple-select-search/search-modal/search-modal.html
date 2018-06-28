@@ -1,0 +1,29 @@
+<!-- Generated template for the SearchModalComponent component -->
+<!--style="width: 100%; top: 0%; left: 0%; right: 0%; bottom: 0%;"-->
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar (ionInput)="doSearch($event)"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of list">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-checkbox [checked]="isChecked(item)" (ionChange)="onChangeCheckBox($event, item)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer style="">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="dark" clear (click)="closeModal($event)">Cancel</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear (click)="done()">Ok</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
