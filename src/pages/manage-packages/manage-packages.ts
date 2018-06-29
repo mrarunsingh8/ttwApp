@@ -1,6 +1,10 @@
 import {Component} from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {ActionSheetController, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {ImageGalleryPage} from "./image-gallery/image-gallery";
+import {AddPricePage} from "./add-price/add-price";
+import {AddPackagePage} from "./add-package/add-package";
+import {DayItineraryPage} from "./day-itinerary/day-itinerary";
+import {PackageRateCardPage} from "./package-rate-card/package-rate-card";
 
 /**
  * Generated class for the ManagePackagesPage page.
@@ -39,7 +43,7 @@ export class ManagePackagesPage {
     {},
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private actionSheetCtr: ActionSheetController) {
   }
 
   ionViewDidLoad() {
@@ -50,4 +54,48 @@ export class ManagePackagesPage {
     this.navCtrl.push(ImageGalleryPage);
   }
 
+  openAddPrice(id?:number){
+    this.navCtrl.push(AddPricePage);
+  }
+
+  handleClick(){
+    let actionSheet = this.actionSheetCtr.create({
+      buttons: [
+        {
+          text: 'Edit Package',
+          handler: ()=>{
+            this.navCtrl.push(AddPackagePage);
+          }
+        },
+        {
+          text: 'Gallery',
+          handler: ()=>{
+            this.navCtrl.push(ImageGalleryPage);
+          }
+        },
+
+        {
+          text: 'Day wise Itinarary',
+          handler: ()=>{
+            this.navCtrl.push(DayItineraryPage);
+          }
+        },
+
+        {
+          text: 'Rate card',
+          handler: ()=>{
+            this.navCtrl.push(PackageRateCardPage);
+          }
+        },
+        {
+          text: 'Delete Package',
+          handler: ()=>{
+
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
 }
+

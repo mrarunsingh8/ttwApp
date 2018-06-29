@@ -7,12 +7,51 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Image-Gallery</ion-title>
+    <inner-header></inner-header>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-toolbar>
+    <ion-title>Package Image Gallery</ion-title>
+  </ion-toolbar>
+
+  <ion-card *ngFor="let item of imageGallery">
+    <ion-card-header>
+      <img [src]="item.image"/>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list inset>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label floating>Display Order</ion-label>
+              <ion-input type="text" [value]="item.displayOrder"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <button ion-button clear>
+                <ion-icon name="trash" color="basic"></ion-icon>
+                Delete
+              </button>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-item>
+          <ion-label floating>Image Title</ion-label>
+          <ion-input [value]="item.imageTitle"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Enable as Profile Pic</ion-label>
+          <ion-radio [checked]="item.isProfile" value="go"></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
 
 </ion-content>
+

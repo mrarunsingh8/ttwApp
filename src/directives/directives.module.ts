@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
+import { IonRepeatDirective } from './ion-repeat/ion-repeat';
 @NgModule({
-	declarations: [],
+	declarations: [IonRepeatDirective],
 	imports: [],
-	exports: []
+	exports: [IonRepeatDirective]
 })
 export class DirectivesModule {}
 

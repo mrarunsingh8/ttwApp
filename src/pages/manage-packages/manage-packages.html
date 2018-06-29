@@ -23,7 +23,7 @@
           <ion-row>
               <p ion-item>
                 <ion-badge  color="basic" item-start>2D/1N</ion-badge>
-                <button ion-button item-end outline color="basic">
+                <button ion-button item-end outline color="basic" (click)="handleClick()">
                   <ion-icon name="settings"></ion-icon>
                 </button>
               </p>
@@ -32,12 +32,12 @@
               </p>
               <p ion-item>
                 <span ion-text align-items-start>10</span>
-                <button align-items-center tooltip="People Inquiries" color="lightDark" positionV="bottom" arrow>
+                <button align-items-center tooltip="People Inquiries" color="blacktext" positionV="bottom" arrow>
                   <ion-icon name="information-circle"></ion-icon>
                 </button>
 
                 <span ion-text align-items-start>0</span>
-                <button align-items-center  tooltip="People View" color="lightDark" positionV="bottom" arrow>
+                <button align-items-center  tooltip="People View" color="blacktext" positionV="bottom" arrow>
                   <ion-icon name="eye"></ion-icon>
                 </button>
               </p>
@@ -71,7 +71,7 @@
       <ion-item>
         <ion-badge  color="basic" item-start>65%</ion-badge>
         Price
-        <button ion-button item-end outline color="basic">
+        <button ion-button item-end outline color="basic" (click)="openAddPrice(1)">
           <ion-icon name="add" item-end></ion-icon> Add
         </button>
       </ion-item>

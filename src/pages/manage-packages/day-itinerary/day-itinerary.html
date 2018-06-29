@@ -1,0 +1,40 @@
+<!--
+  Generated template for the DayItineraryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <inner-header></inner-header>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-toolbar>
+    <ion-title>Day Wise Itinerary</ion-title>
+  </ion-toolbar>
+
+  <ion-card *ngFor="let item of dayItinerary">
+    <ion-card-header ion-item>
+      <h1 item-start padding-top>Day {{item.day}}</h1>
+      <button ion-button item-end outline (click)="updateItinerary()">
+        <ion-icon name="create" large></ion-icon>
+      </button>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list-header>Title</ion-list-header>
+      <ion-item>
+        <h5 ion-text>Title Goes Here</h5>
+      </ion-item>
+      <ion-list-header>Meal</ion-list-header>
+      <ion-item>
+        <h5 ion-text>Meal Goes Here</h5>
+      </ion-item>
+      <ion-list-header>Hotel</ion-list-header>
+      <ion-item>
+        <h5 ion-text>Hote name Goes Here, LoremIpsum Goes Here.</h5>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

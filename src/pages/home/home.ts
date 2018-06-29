@@ -20,6 +20,4 @@ export class HomePage {
       this.menuCtr.enable(true);
     }
   }
-
-
 }
