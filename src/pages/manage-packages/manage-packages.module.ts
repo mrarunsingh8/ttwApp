@@ -13,6 +13,8 @@ import {PackageRateCardPage} from "./package-rate-card/package-rate-card";
 import {PackageRateCardUpdatePage} from "./package-rate-card-update/package-rate-card-update";
 import {PackageRateCardTablePage} from "./package-rate-card-table/package-rate-card-table";
 import {DirectivesModule} from "../../directives/directives.module";
+import {BulkTourPackagePage} from "./bulk-tour-package/bulk-tour-package";
+import {PackagesProvider} from "./shared/packages";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {DirectivesModule} from "../../directives/directives.module";
     UpdateItineraryPage,
     PackageRateCardPage,
     PackageRateCardUpdatePage,
-    PackageRateCardTablePage
+    PackageRateCardTablePage,
+    BulkTourPackagePage
   ],
   imports: [
     IonicPageModule.forChild(ManagePackagesPage),
@@ -33,6 +36,7 @@ import {DirectivesModule} from "../../directives/directives.module";
     TooltipsModule,
     MultipleSelectSearchModule
   ],
+  providers: [PackagesProvider],
   entryComponents: [
     AddPackagePage,
     ImageGalleryPage,
@@ -41,7 +45,8 @@ import {DirectivesModule} from "../../directives/directives.module";
     UpdateItineraryPage,
     PackageRateCardPage,
     PackageRateCardUpdatePage,
-    PackageRateCardTablePage
+    PackageRateCardTablePage,
+    BulkTourPackagePage
   ]
 })
 export class ManagePackagesPageModule {}

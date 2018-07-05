@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -22,7 +22,8 @@ import {BuyLeadPage} from "../pages/home/buy-lead/buy-lead";
 import {ComponentsModule} from "../components/components.module";
 import {ManagePackagesPageModule} from "../pages/manage-packages/manage-packages.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { PackagesProvider } from '../pages/manage-packages/shared/packages';
+import {ToolsPageModule} from "../pages/tools/tools.module";
+import {CatalogToolsPageModule} from "../pages/catalog-tools/catalog-tools.module";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { PackagesProvider } from '../pages/manage-packages/shared/packages';
     AdvertisePageModule,
     LeadsPageModule,
     ComponentsModule,
-    ManagePackagesPageModule
+    ManagePackagesPageModule,
+    ToolsPageModule,
+    CatalogToolsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,7 +63,7 @@ import { PackagesProvider } from '../pages/manage-packages/shared/packages';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    PackagesProvider
+    InAppBrowser
   ]
 })
 export class AppModule {}

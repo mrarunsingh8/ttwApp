@@ -1,0 +1,17 @@
+page-tools {
+  button {
+    background-color: transparent;
+    color: color($colors, basic);
+  }
+  .card .card-content .row:not(:last-of-type){
+    border-bottom: 0.002rem solid color($colors, grayText);
+    padding: 8px;
+  }
+  .card .card-content .row .col{
+    color: color($colors, blackText);
+  }
+  .modal-wrapper {
+    padding: 30px;
+    background: rgba(0,0,0,0.5);
+  }
+}

@@ -50,6 +50,10 @@ export class ManagePackagesPage {
     console.log('ionViewDidLoad ManagePackagesPage');
   }
 
+  openDayItinerary(id){
+    this.navCtrl.push(DayItineraryPage);
+  }
+
   openImageGallery(id){
     this.navCtrl.push(ImageGalleryPage);
   }
@@ -58,7 +62,7 @@ export class ManagePackagesPage {
     this.navCtrl.push(AddPricePage);
   }
 
-  handleClick(){
+  handleAction(){
     let actionSheet = this.actionSheetCtr.create({
       buttons: [
         {

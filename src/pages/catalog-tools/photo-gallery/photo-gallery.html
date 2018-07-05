@@ -1,0 +1,47 @@
+<!--
+  Generated template for the PhotoGalleryPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <inner-header></inner-header>
+    <ion-buttons ion-button icon-only outline end clear>
+      <button (click)="openNew()"> <ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-toolbar>
+    <ion-title>Manage Catalog Photo Gallery</ion-title>
+  </ion-toolbar>
+
+  <ion-card *ionRepeat="'5'">
+    <ion-thumbnail item-start>
+      <img src="../assets/imgs/kerala-tour-packages.jpg">
+    </ion-thumbnail>
+    <ion-list>
+      <ion-item>
+        <ion-badge item-start color="basic" item-start>Active</ion-badge>
+        <button ion-button item-end outline color="basic" (click)="handleAction()">
+          <ion-icon name="settings"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Order No</ion-label>
+        <ion-input value="0"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="timer" item-start></ion-icon>
+        <h2 item-end ion-text>05-Jul-2018</h2>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text item-start>Category</h2>
+        <h2 item-end ion-text>Category Here</h2>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+
+</ion-content>
